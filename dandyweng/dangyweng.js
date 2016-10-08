@@ -1,82 +1,3 @@
-/**
- * Created by Fate on 2016/9/30.
- */
-/*
-var textAttr = {
-    "fill": "#000",
-    "font-size": "12px",
-    "cursor": "pointer"
-};
-
-
-for (var state in china) {
-    china[state]['path'].color = Raphael.getColor(0.9);
-
-    (function (st, state) {
-
-        //获取当前图形的中心坐标
-        var xx = st.getBBox().x + (st.getBBox().width / 2);
-        var yy = st.getBBox().y + (st.getBBox().height / 2);
-
-        //***修改部分地图文字偏移坐标
-        switch (china[state]['name']) {
-            case "江苏":
-                xx += 5;
-                yy -= 10;
-                break;
-            case "河北":
-                xx -= 10;
-                yy += 20;
-                break;
-            case "天津":
-                xx += 10;
-                yy += 10;
-                break;
-            case "上海":
-                xx += 10;
-                break;
-            case "广东":
-                yy -= 10;
-                break;
-            case "澳门":
-                yy += 10;
-                break;
-            case "香港":
-                xx += 20;
-                yy += 5;
-                break;
-            case "甘肃":
-                xx -= 40;
-                yy -= 30;
-                break;
-            case "陕西":
-                xx += 5;
-                yy += 10;
-                break;
-            case "内蒙古":
-                xx -= 15;
-                yy += 65;
-                break;
-            default:
-        }
-        //写入文字
-        china[state]['text'] = R.text(xx, yy, china[state]['name']).attr(textAttr);
-
-        st[0].onmouseover = function () {
-            st.animate({fill: "rgb(177,177,177)", stroke: "#eee"}, 500);
-            china[state]['text'].toFront();
-            R.safari();
-        };
-        st[0].onmouseout = function () {
-            st.animate({fill: "rgb(230,230,230)", stroke: "#eee"}, 500);
-            china[state]['text'].toFront();
-            R.safari();
-        };
-
-    })(china[state]['path'], state);
-}
-}    */
-
 
 
 window.onload = function(){
@@ -175,6 +96,10 @@ window.onload = function(){
         oTop.innerHTML = "云南";
         oTop.style.opacity = 1;
     };
+    document.getElementById("svg14").onmouseleave = function()
+    {
+        oTop.style.opacity = 0;
+    };
     document.getElementById("svg15").onmouseenter = function()
     {
         oTop.innerHTML = "江西";
@@ -216,6 +141,7 @@ window.onload = function(){
     document.getElementById("svg21").onmouseenter = function()
     {
         oTop.innerHTML = "广东";
+        oTop.style.opacity = 1;
     };
     document.getElementById("svg21").onmouseleave = function()
     {
@@ -224,6 +150,7 @@ window.onload = function(){
     document.getElementById("svg22").onmouseenter = function()
     {
         oTop.innerHTML = "海南";
+        oTop.style.opacity = 1;
     };
     document.getElementById("svg23").onmouseenter = function()
     {
@@ -234,37 +161,65 @@ window.onload = function(){
     {
         oTop.style.opacity = 0;
     };
+    document.getElementById("svg22").onmouseleave = function()
+    {
+        oTop.style.opacity = 0;
+    };
     document.getElementById("svg24").onmouseenter = function()
     {
-        oTop.innerHTML = "四川24";
+        oTop.innerHTML = "宁夏";
+        oTop.style.opacity = 1;
     };
     document.getElementById("svg25").onmouseenter = function()
     {
-        oTop.innerHTML = "四川25";
+        oTop.innerHTML = "青海";
+        oTop.style.opacity = 1;
     };
     document.getElementById("svg26").onmouseenter = function()
     {
-        oTop.innerHTML = "四川26";
+        oTop.innerHTML = "甘肃";
+        oTop.style.opacity = 1;
     };
     document.getElementById("svg27").onmouseenter = function()
     {
-        oTop.innerHTML = "四川27";
+        oTop.innerHTML = "陕西";
+        oTop.style.opacity = 1;
+    };
+    document.getElementById("svg28").onmouseleave = function()
+    {
+        oTop.style.opacity = 0;
     };
     document.getElementById("svg28").onmouseenter = function()
     {
-        oTop.innerHTML = "四川28";
+        oTop.innerHTML = "黑龙江";
+        oTop.style.opacity = 1;
     };
     document.getElementById("svg29").onmouseenter = function()
     {
-        oTop.innerHTML = "四川29";
+        oTop.innerHTML = "吉林";
+        oTop.style.opacity = 1;
+    };
+    document.getElementById("svg29").onmouseleave = function()
+    {
+        oTop.style.opacity = 0;
     };
     document.getElementById("svg30").onmouseenter = function()
     {
-        oTop.innerHTML = "四川30";
+        oTop.innerHTML = "辽宁";
+        oTop.style.opacity = 1;
+    };
+    document.getElementById("svg30").onmouseleave = function()
+    {
+        oTop.style.opacity = 0;
     };
     document.getElementById("svg31").onmouseenter = function()
     {
-        oTop.innerHTML = "四川31";
+        oTop.innerHTML = "台湾";
+        oTop.style.opacity = 1;
+    };
+    document.getElementById("svg31").onmouseleave = function()
+    {
+        oTop.style.opacity = 0;
     };
     document.getElementById("svg32").onmouseenter = function()
     {
@@ -272,59 +227,77 @@ window.onload = function(){
     };
 
 }
+
 var set= 0;
+var i= 0;
+var j = 0;
+var home2 = document.getElementById( "heading" );
+var home3 = document.getElementById( "home-p" );
+var intervalId;
+var intervalId2;
+var sign;
+
+
+function outCon()
+{
+    var home2 = document.getElementById( "heading" );
+    var home3 = document.getElementById( "home-p" );
+    home2.style.top = 120 + j*5 +"px";
+    home3.style.top = 260 + j*5 +"px" ;
+    console.log("2333");
+    if(j<170)
+    {
+        j++;
+    }
+
+    else
+    {
+        set=0;
+        clearInterval(intervalId2);
+    }
+}
+
+function showCon()
+{
+    var home2 = document.getElementById( "heading" );
+    var home3 = document.getElementById( "home-p" );
+    home2.style.top = 970 - i*5 + "px";
+    home3.style.top = 1110 - i*5 + "px" ;
+    console.log("logo");
+    if(i<170)
+    {
+        i++;
+    }
+    else
+    {
+        set=1;
+        clearInterval(intervalId);
+    }
+}
+var time=766;
+var timer = null;
+
 
 window.onscroll = function()
 {
     var timeline = document.getElementById( "cd-timeline" );
-    var home2 = document.getElementById( "heading" );
-    var home3 = document.getElementById( "home-p" );
     var t = document.documentElement.scrollTop || document.body.scrollTop;
-    var i= 0;
-    var j = 0;
-    function showCon()
-    {
-        home2.style.top = 820 - i*5 + "px";
-        home3.style.top = 960 - i*5 + "px" ;
-        console.log(i);
-        i++;
-    }
- function outCon()
-    {
-        home2.style.top = 120 + j*5 +"px";
-        home3.style.top = 260 + j*5 +"px" ;
-         console.log(j);
-        j++;
-    }
+    console.log(t);
     if( t >= 500 && t<=1500 && set==0 )
     {
-        set=1;
+         intervalId = setInterval("showCon()", 5);
         timeline.style.opacity = 1;
         home2.style.opacity = 1;
         home3.style.opacity = 1;
-        var intervalId = setInterval(showCon(), 5);
-        if(i==140)
-        {
-            clearInterval(intervalId);
-        }
     }
-
-   else if( t<=550 ||t>=1500 )
+       else if( (t<550&&set==1) || (t>1500&&set==1) )
     {
         timeline.style.opacity=0;
-        if(t>=1500)
+        if(t>1500)
         {
-            intervalId = setInterval(outCon(), 5);
-        }
+            intervalId2 = setInterval("outCon()", 5);
 
-        if(i==140)
-        {
-            clearInterval(intervalId);
-            set=0;
         }
-    }
-    else{
-
     }
    // console.log(t);
     if( t >= 2450 && t<=3100 )
@@ -335,4 +308,70 @@ window.onscroll = function()
     {
          timeline.style.opacity = 1;
      }
+
+};
+
+/*window.onload = function()
+{
+
+    var t = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if(t>=6860)
+    {
+        begin();
+    }
+};*/
+
+function begin()
+{
+    timer = setInterval(function(){
+        progress();
+    },60)
+}
+function progress(){
+    var oDiv = document.getElementById("visit");
+    if(oDiv.innerHTML != "总访问量：611766") {
+        time = time +1000;
+        oDiv.innerHTML = "总访问量：" + time;
+    }
+    if(oDiv.innerHTML == "总访问量：611766"){
+        clearInterval(timer);
+    }
+}
+
+function showPhoto()
+{
+    document.getElementById("photo-section").style.opacity = 1;
+    document.getElementById("left").style.opacity = 1;
+    document.getElementById("right").style.opacity = 1;
+}
+var f = 1;
+function leftMove()
+{
+    document.getElementById("photo-section").style.left = -1800*(f -1) + "px";
+    if(f>1) {
+        f--;
+    }
+}
+function rightMove()
+{
+    document.getElementById("photo-section").style.left = -1800*f + "px";
+    if(f<13) {
+        f++;
+    }
+}
+
+function cancelMove()
+{
+    document.getElementById("photo-section").style.opacity = 0;
+
+}
+
+document.onreadystatechange = subSomething;//当页面加载状态改变的时候执行这个方法.
+function subSomething()
+{
+    if(document.readyState == "complete") //当页面加载状态
+    {
+        document.getElementById("spinner").style.opacity = 0;
+    }
 }

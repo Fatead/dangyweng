@@ -22,9 +22,17 @@ body{
     border-radius: 80px;
     border: 3px solid;
     overflow: hidden;
-    border-color: rgb(180,180,180);
     background: rgb(160,165,170) no-repeat center;
     background-size: cover;
+}
+.head-section{
+    padding: 0;
+    color: white;
+    display: block;
+    position:absolute;
+    border-radius: 80px;
+    overflow: hidden;
+    background: inherit;
 }
 .intro img
 {
@@ -118,7 +126,7 @@ body{
 }
 .heading
 {
-    top: 820px;
+    top: 970px;
     font-size: 3.0em;
     width:600px;
     height: 20%;
@@ -128,7 +136,7 @@ body{
 }
 .heading-p
 {
-    top: 960px;
+    top: 1110px;
     font-size: 1.5em;
     width:600px;
     height: 50%;
@@ -251,7 +259,7 @@ p.larger
     line-height: 15px;
     width:35px;
     overflow: hidden;
-    margin: 14px 8px auto -7px;
+    margin: 14px 8px auto -13px;
     transition:width .6s;
 }
 .pal-odd
@@ -262,7 +270,7 @@ p.larger
     line-height: 15px;
     width:20px;
     overflow: hidden;
-    margin:14px -7px auto 12px;
+    margin:14px -12px auto 12px;
     transition: width .6s;
 }
 .cd-timeline-img img {
@@ -413,10 +421,9 @@ p.control
     z-index: 2;
 }
 .photo{
-    background: url("");
     padding: 0;
     width: 100%;
-    height: 700px;
+    height: 1000px;
     color: black;
     display: block;
     float:left;
@@ -429,30 +436,77 @@ p.control
     background: url("img/crossword.png");
     z-index: 1;
 }
+.photo-section{
+    padding: 0;
+    width: 90000px;
+    height: 600px;
+    position: absolute;
+    display: block;
+    margin: 200px auto auto 500px;
+    overflow: hidden;
+    z-index: 4;
+    opacity: 0;
+}
+.pad{
+    width:900px;
+    height:600px;
+    position: relative;
+    float: left;
+}
+.left{
+    width:50px;
+    height:50px;
+    position: relative;
+    float: left;
+    border-radius: 50px;
+    background-color: rgb(200,200,200);
+    padding: 10px;
+    margin: 10px;
+}
+.right{
+    margin: 10px;
+    width:50px;
+    height:50px;
+    position: relative;
+    float: left;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: rgb(200,200,200);
+}
+.cancel{
+    margin: 10px auto auto 60px;
+    width:50px;
+    height:50px;
+    position: relative;
+    float: left;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: rgb(200,200,200);
+}
 .photo-section1{
-    padding: 0px;
+    margin: 100px auto auto auto;
     width: 100%;
-    height: 150px;
+    height: 250px;
     display: block;
     float:left;
     position:relative;
     z-index: 3;
+    font-size: 1.3em;
 }
 .photo-section2 {
-    margin: 10px auto auto 15%;
+    margin: 10px auto auto 300px;
     width: 75%;
-    height:250px;
+    height:300px;
     float: left;
     position: relative;
     overflow: hidden;
 }
 .photo-section3 {
-    margin: 10px auto auto 35%;
+    margin: 150px auto auto 860px;
     width: 30%;
     height:100px;
     float: left;
     position: relative;
-    background-color: aqua;
     opacity: 1;
 }
 .photo-section4{
@@ -469,7 +523,7 @@ p.control
     background-attachment: fixed;
     padding: 0;
     width: 100%;
-    height: 700px;
+    height: 1000px;
     color: white;
     display: block;
     float:left;
@@ -481,9 +535,9 @@ p.control
     z-index: 1;
 }
 .design-section1{
-    padding: 0px;
+    margin: 100px auto auto auto;
     width: 50%;
-    height: 700px;
+    height: 1000px;
     color: white;
     display: block;
     float:left;
@@ -491,28 +545,30 @@ p.control
     z-index: 3;
 }
 .design-section2 {
-    padding: 0;
+    padding:300px 100px 500px 100px;
+    font-size: 1.5em;
     width: 50%;
-    height:700px;
+    height:1000px;
     display: block;
     float: left;
     position: relative;
     z-index: 3;
+    line-height: 180%;
 }
 .design-section3{
-    margin: 100px;
+    margin: 200px auto auto 100px;
     padding: 50px;
-    width: 600px;
-    height: 700px;
+    width: 700px;
+    height: 1000px;
     color: white;
     display: block;
     float:left;
     position:relative;
 }
-.design-section4
-{
-    width: 190px;
-    height: 113px;
+.design-section4 {
+
+    width: 260px;
+    height: 140px;
     color: white;
     display: block;
     float:left;
@@ -520,6 +576,8 @@ p.control
     border-radius: 5px;
     background-color: black;
     margin: 8px;
+    overflow: hidden;
+    border: 2px solid white;
 }
 
 #to_top
@@ -536,14 +594,13 @@ p.control
     opacity: 0;
     color: white;
 }
-
 .speech{
     background: url("img/design.jpg");
     background-attachment: fixed;
     background-color: white;
     padding: 0;
     width: 100%;
-    height: 700px;
+    height: 1000px;
     color: white;
     display: block;
     float:left;
@@ -552,13 +609,19 @@ p.control
     overflow: hidden;
     background-color: rgba(255,255,255,1);
 }
-
-.speech-section1{
+.control2
+{
+    font-size: 14px;
+}
+.speech-section1
+{
     background-color: rgba(255,255,255,1);
-    padding:35px;
+    padding:160px;
+    font-size: 1.5em;
+    line-height: 180%;
     color: black;
     width: 40%;
-    height: 290px;
+    height: 600px;
     display: block;
     float:left;
     position:relative;
@@ -569,8 +632,8 @@ p.control
 {
     margin: 0 auto auto 600px;
     padding: 0;
-    width: 65%;
-    height: 290px;
+    width: 70%;
+    height: 600px;
     color: white;
     display: block;
     float:left;
@@ -584,13 +647,13 @@ p.control
     background: url("img/design.jpg");
     padding: 0;
     width: 100%;
-    height: 290px;
+    height: 600px;
     color: white;
     display: block;
     float:left;
     position:relative;
     background-attachment: fixed;
-    border-radius: 0 0 0 300px;
+    border-radius: 0 0 0 900px;
     z-index: 1;
 
 }
@@ -603,7 +666,7 @@ p.control
     padding: 0;
     top:-8px;
     width: 100%;
-    height: 300px;
+    height: 630px;
     color: white;
     display: block;
     position:absolute;
@@ -621,8 +684,8 @@ p.control
 .speech-section3
 {
     padding: 0;
-    width: 100%;
-    height: 290px;
+    width: 2000px;
+    height: 600px;
     color: white;
     display: block;
     float:left;
@@ -630,19 +693,153 @@ p.control
     background-attachment: fixed;
     background-color: white;
 }
+.speech-section4
+{
+    padding: 0;
+    width: 630px;
+    height: 140px;
+    color: white;
+    margin: 90px;
+    display: block;
+    float:left;
+    position:relative;
+    border-radius: 5px;
+    box-shadow: rgb(210,210,210) 4px 4px 4px;
+    border:1px solid rgb(210,210,210);
+}
 .lin
 {
     padding: 0;
     width: 100%;
-    height: 290px;
+    height: 460px;
     color: white;
     display: block;
     float:left;
     position:relative;
     background: url("img/more.jpg");
     background-attachment: fixed;
-    top:-150px;
 }
+.letter {
+     background-color: white;
+     background: url(img/snow.png) repeat;
+     padding: 0;
+     width: 100%;
+     height: 1000px;
+     color: white;
+     display: block;
+     float: left;
+     position: relative;
+     border: 1px solid rgba(255, 255, 255, 0.1);
+     overflow: hidden;
+     background-color: rgba(255, 255, 255, 1);
+ }
+
+.letter-section1
+{
+    font-size: 1.5em;
+    line-height: 180%;
+    background:inherit;
+    padding: 100px;
+    text-align: center;
+    width: 100%;
+    height: 360px;
+    color: black;
+    display: block;
+    float:left;
+    position:relative;
+}
+.letter-section2
+{
+    padding: 80px;
+    font-size: 16px;
+    background:white;
+    width: 670px;
+    height: 900px;
+    color: black;
+    display: block;
+    float:left;
+    position:absolute;
+    z-index: 3;
+    margin: 390px auto auto 615px;
+    text-align: center;
+}
+.footer {
+    text-align: center;
+    background: url(img/concrete_wall.png) repeat;
+    padding: 0;
+    width: 100%;
+    height: 500px;
+    color: white;
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.footer-section1 {
+    text-align: center;
+    padding: 80px 500px 10px 500px;
+    width: 100%;
+    height: 190px;
+    color: grey;
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.footer-section2 {
+    margin: 10px;
+    text-align: center;
+    line-height: 53px;
+    width: 200px;
+    height: 53px;
+    color: rgb(190,190,190);
+    font-size: 20px;
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    border:1px solid white;
+    border-radius: 7px;
+}
+.footer-section2:hover
+{
+    color:white;
+}
+.footer-section3 {
+    text-align: center;
+    line-height: 160%;
+    width: 50%;
+    height: 150px;
+    color: rgb(190,190,190);
+    font-size: 20px;
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.footer-section4 {
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    height: 100px;
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.fly {
+    margin: 1px 800px auto 920px;
+    width: 54px;
+    height: 54px;
+    border-radius: 60px;
+    padding: 8px;
+    background: rgb(60,70,60);
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
 #svg1:hover
 {
     background-color: grey;
@@ -813,9 +1010,100 @@ p.control
     -o-transition-duration: .7s; /* Opera */
 }
 
-
+.box{
+    margin: 10px 500px auto 600px;
+    z-index: 3;
+    float: left;
+    width: 700px;
+    height: 15px;
+    background: repeating-linear-gradient(
+            45deg,
+            rgb(155,95,105),
+            rgb(155,95,105) 25px,
+            white 15px,
+            white 50px
+    );
+}
+.box2{
+    margin: 10px 500px auto 600px;
+    z-index: 3;
+    float: left;
+    width: 15px;
+    height: 900px;
+    background: repeating-linear-gradient(
+            45deg,
+            rgb(155,95,105),
+            rgb(155,95,105) 25px,
+            white 15px,
+            white 50px
+    );
+}
+.box3{
+    z-index: 4;
+    float: left;
+    margin: 0 auto auto 174px;
+    width: 15px;
+    height: 900px;
+    background: repeating-linear-gradient(
+            45deg,
+            rgb(155,95,105),
+            rgb(155,95,105) 25px,
+            white 15px,
+            white 50px
+    );
+}
 
 
 
 ::selection { background:rgba(150,150,150,0.6); }
 ::-moz-selection { background:rgba(150,150,150,0.6); }
+
+
+
+input{
+    border: 2px solid rgb(220,190,190);
+    padding: 7px 0px;
+    border-radius: 7px;
+    padding-left:5px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(220,190,190);
+    box-shadow: inset 0 1px 1px rgb(220,190,190);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+input:focus{
+    border-color: rgb(175,175,175);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(175,175,175,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(175,175,175,.6);
+}
+.spinner {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    margin: 400px 800px auto 900px;
+    background-color: #333;
+     opacity: 0;
+    border-radius: 100%;
+    -webkit-animation: scaleout 1.0s infinite ease-in-out;
+    animation: scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes scaleout {
+    0% { -webkit-transform: scale(0.0) }
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+@keyframes scaleout {
+    0% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 100% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+      }
+}
